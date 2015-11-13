@@ -1,0 +1,23 @@
+{
+  "name": "pacg.sheet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xunrel/pacg.sheet.git"
+  },
+  "keywords": [
+    "js",
+    "pacg"
+  ],
+  "author": "Daniel Trott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xunrel/pacg.sheet/issues"
+  },
+  "homepage": "https://github.com/Xunrel/pacg.sheet"
+}
