@@ -1,0 +1,24 @@
+{
+  "name": "pacg.sheet",
+  "description": "some js testing",
+  "main": "index.html",
+  "authors": [
+    "Daniel Trott"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "js",
+    "pacg"
+  ],
+  "homepage": "https://github.com/Xunrel/pacg.sheet",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
