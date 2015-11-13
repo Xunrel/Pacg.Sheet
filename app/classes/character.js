@@ -1,23 +1,23 @@
-define(["card"],
+define(['classes/card'],
 	function (card) {
-		var name = '';
+		var characterName = '';
 		var cards = [];
 		
-		var init = function (name, cards) {
-			this.name = name;
+		var init = function (characterName, cards) {
+			this.characterName = characterName;
 			this.cards = cards;
 		};
 		
 		var addCard = function (cardName) {
-			cards.push(card.init(cardName));
+			this.cards.push(card.init(cardName));
 		};
 		
 		var Character = {
-			name: name,
+			name: characterName,
 			cards: cards,
 			init: init,
 			addCard: addCard
-		}
+		};
 		
 		return Character;
 	}

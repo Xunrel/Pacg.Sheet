@@ -8,16 +8,16 @@
 // 	
 // 	return Pacg;
 // })();
-define(["jquery"],
-	function ($) {
+define(["jquery", "engine"],
+	function ($, engine) {
 		var appName = 'PACG Sheet';
 		var version = '0.0.1';
 		
 		var init = function () {
 			$(document).ready(function () {
-				// console.log(Pacg.name + " Version: " + Pacg.version);
 				$('[data-pacg="title"]').text(appName);
 				$('[data-pacg="version"]').text("Version: " + version);
+				engine.init();
 			});
 		};
 		
