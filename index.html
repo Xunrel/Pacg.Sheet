@@ -36,6 +36,25 @@
 				<h1 data-pacg="title"></h1>
 			</div>
 			<div class="row">
+				<h2 class="col-md-12">Available Groups</h2>
+			</div>
+			<div class="row">
+				<ul class="col-md-12" data-bind="foreach: engine.groups">
+					<li>
+						<a data-bind="text: $data.groupName, attr: { href: '#' + $data.groupName() }"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button type="button" class="btn btn-success ">
+						<span class="glyphicon glyphicon-plus">
+							Create
+						</span>
+					</button>
+				</div>
+			</div>
+			<!--<div class="row">
 				<div class="col-md-6 form-group">
 					<label for="groupName">Groupname:</label>
 					<input class="form-control" type="text" name="groupName" />
@@ -47,6 +66,12 @@
 					<input class="form-control" type="number" name="playerCount" />
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-6 form-group">
+					<button class="btn btn-primary glyphicon glyphicon-plus" data-bind="click: function(data, event) { engine.addGroup('test', data, event) }">Add Group</button>
+				</div>
+			</div>-->
+			<hr/>
 			<div class="page-footer">
 				<h5 data-pacg="version"></h5>
 			</div>

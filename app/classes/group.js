@@ -1,32 +1,22 @@
-define(['classes/player', 'classes/ship'],
-	function (player, ship) {
-		var groupName = ''
-		var players = [];
-		var ships = [];
-		
-		var init = function (groupName, players, ships) {
-			this.groupName = groupName;
-			this.players = players;
-			this.ships = ships;
-		};
-		
-		var addPlayer = function (playerName) {
-			this.players.push(player.init(playerName, []));
-		};
-		
-		var addShip = function (shipName) {
-			this.ships(ship.init(shipName));
-		};
-		
-		var Group = {
-			name: groupName,
-			players: players,
-			ships: ships,
-			init: init,
-			addPlayer: addPlayer,
-			addShip: addShip
+define(['classes/player', 'classes/ship', 'ko'],
+	function (Player, Ship, ko) {
+		return function Group() {
+			var self = this;
+			self.groupName = ko.observable('');
+			self.players = ko.observableArray([]);
+			self.ships = ko.observableArray([]);
+			
+			self.addPlayer = function (playerName) {
+				var newPlayer = new Player();
+				newPlayer.playerName(playerName);
+				this.players.push(newPlayer);
+			};
+			
+			self.addShip = function (shipName) {
+				var newShip = new Ship();
+				newShip.shipName(shipName);
+				this.ships(newShip);
+			};
 		}
-		
-		return Group;
 	}
 );

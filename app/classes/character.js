@@ -1,24 +1,15 @@
-define(['classes/card'],
-	function (card) {
-		var characterName = '';
-		var cards = [];
-		
-		var init = function (characterName, cards) {
-			this.characterName = characterName;
-			this.cards = cards;
+define(['classes/card', 'ko'],
+	function (Card, ko) {
+		return function Character() {
+			var self = this;
+			self.characterName = ko.observable();
+			self.cards = ko.observableArray();
+
+			self.addCard = function (cardName) {
+				var newCard = new Card();
+				newCard.cardName(cardName);
+				this.cards.push(newCard);
+			};
 		};
-		
-		var addCard = function (cardName) {
-			this.cards.push(card.init(cardName));
-		};
-		
-		var Character = {
-			name: characterName,
-			cards: cards,
-			init: init,
-			addCard: addCard
-		};
-		
-		return Character;
 	}
 );

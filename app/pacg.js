@@ -1,5 +1,5 @@
-define(["jquery", "engine"],
-	function ($, engine) {
+define(["jquery", "engine", 'ko'],
+	function ($, engine, ko) {
 		var appName = 'PACG Sheet';
 		var version = '0.0.1';
 		
@@ -7,14 +7,14 @@ define(["jquery", "engine"],
 			$(document).ready(function () {
 				$('[data-pacg="title"]').text(appName);
 				$('[data-pacg="version"]').text("Version: " + version);
-				engine.init();
 			});
 		};
 		
 		var Pacg = {
 			name: appName,
 			version: version,
-			init: init
+			init: init,
+			engine: engine
 		};
 		
 		return Pacg;

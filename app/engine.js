@@ -1,18 +1,15 @@
-define(['classes/group'],
-	function (group) {
-		var groups = [];
-		
-		var init = function () {
-			console.log('Initializing application...');
-		};
+define(['classes/Group', 'ko'],
+	function (Group, ko) {
+		var groups = ko.observableArray([]);
 		
 		var addGroup = function (groupName) {
-			this.groups.push(group.init(groupName, []));
+			var newGroup = new Group();
+			newGroup.groupName(groupName);
+			this.groups.push(newGroup);
 		}
 		
 		var Engine = {
 			groups: groups,
-			init: init,
 			addGroup: addGroup
 		};
 		

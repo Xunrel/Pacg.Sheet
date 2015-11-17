@@ -1,14 +1,6 @@
-define(function () {
-	var shipName = '';
-	
-	var init = function (shipName) {
-		this.shipName = shipName;
+define(['ko'], function (ko) {
+	return function Ship() {
+		var self = this;
+		self.shipName = ko.observable();
 	}
-	
-	var Ship = {
-		name: shipName,
-		init: init
-	};
-	
-	return Ship;
 });

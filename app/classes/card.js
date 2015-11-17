@@ -1,14 +1,6 @@
-define(function () {
-	var cardName = '';
-	
-	var init = function (cardName) {
-		this.cardName = cardName;
-	};
-	
-	var Card = {
-		name: cardName,
-		init: init
-	};
-	
-	return Card;
+define(['ko'], function (ko) {
+	return function Card() {
+		var self = this;
+		self.cardName = ko.observable();
+	}
 });
