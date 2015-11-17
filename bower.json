@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "knockout": "~3.3.0"
+    "knockout": "~3.4.0",
+    "requirejs": "~2.1.20"
   }
 }

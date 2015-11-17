@@ -8,11 +8,12 @@
 		},
 		paths: {
 			jquery: '../bower_components/jquery/dist/jquery.min',
-			bootstrap: '../bower_components/bootstrap/dist/js/bootstrap.min'
+			bootstrap: '../bower_components/bootstrap/dist/js/bootstrap.min',
+			knockout: '../bower_components/knockout/dist/knockout',
 		}
 	});
 	
-	require(["jquery", "pacg", "bootstrap"], function ($, pacg) {
+	require(["jquery", "pacg"], function ($, pacg) {
 		console.log("jQuery Version: " + $.fn.jquery);
 		pacg.init();
 	});

@@ -1,13 +1,3 @@
-// (function () {
-// 	var Pacg = {
-// 		name: "PACG Sheet"
-// 	};
-// 	Pacg.prototype = {
-// 		constructor: Pacg
-// 	};
-// 	
-// 	return Pacg;
-// })();
 define(["jquery", "engine"],
 	function ($, engine) {
 		var appName = 'PACG Sheet';
