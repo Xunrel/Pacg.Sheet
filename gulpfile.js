@@ -36,8 +36,8 @@ gulp.task('js', ['bowerFiles'], function () {
 });
 
 gulp.task('durandal', function () {
-	// return durandal()
-	// 	.pipe(gulp.dest('dist'));
+		// return durandal()
+		// 	.pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['css', 'html', 'js', 'durandal'], function () {
